@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/hive-o/packages/compare/nest-probot-v1.1.1...nest-probot-v1.2.0) (2024-07-27)
+
+
+### Features
+
+* **nest-probot:** update README.md ([556cef4](https://github.com/hive-o/packages/commit/556cef46554e9bd05eb272c4f790e11f958d4720))
+
 ## [1.1.1](https://github.com/hive-o/packages/compare/nest-probot-v1.1.0...nest-probot-v1.1.1) (2024-07-27)
 
 
