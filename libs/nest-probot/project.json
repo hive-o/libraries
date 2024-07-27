@@ -31,7 +31,10 @@
     },
     "semantic-release": {
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
-      "buildTarget": "build"
+      "buildTarget": "build",
+      "options": {
+        "npm": true
+      }
     }
   }
 }
