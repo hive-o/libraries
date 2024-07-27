@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/hive-o/packages/compare/nest-probot-v1.1.0...nest-probot-v1.1.1) (2024-07-27)
+
+
+### Bug Fixes
+
+* **nest-probot:** add npm publish path ([99c273d](https://github.com/hive-o/packages/commit/99c273dd27e6b7f75ca0a82df596ac746e83b7a2))
+
 # [1.1.0](https://github.com/hive-o/packages/compare/nest-probot-v1.0.0...nest-probot-v1.1.0) (2024-07-27)
 
 
