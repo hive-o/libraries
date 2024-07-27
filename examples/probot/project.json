@@ -1,0 +1,24 @@
+{
+  "name": "probot-example",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "examples/probot/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "probot-example:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "probot-example:build:development"
+        },
+        "production": {
+          "buildTarget": "probot-example:build:production"
+        }
+      }
+    }
+  }
+}
