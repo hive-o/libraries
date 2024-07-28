@@ -1,3 +1,10 @@
+## [1.2.6](https://github.com/hive-o/toolkit/compare/nest-probot-v1.2.5...nest-probot-v1.2.6) (2024-07-28)
+
+
+### Bug Fixes
+
+* **nest-probot:** update package.json to switch to cjs ([550b9b3](https://github.com/hive-o/toolkit/commit/550b9b38d677510dd6ffe3d8d23a330ae636c365))
+
 ## [1.2.5](https://github.com/hive-o/toolkit/compare/nest-probot-v1.2.4...nest-probot-v1.2.5) (2024-07-28)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "@hive-o/nest-probot",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "dependencies": {
     "tslib": "^2.3.0",
     "@octokit/auth-app": "^6.0.4",
