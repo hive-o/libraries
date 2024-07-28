@@ -1955,6 +1955,7 @@ __metadata:
     "@nx/webpack": "npm:19.5.3"
     "@nx/workspace": "npm:19.5.3"
     "@octokit/rest": "npm:^21.0.1"
+    "@probot/get-private-key": "npm:^1.1.2"
     "@swc-node/register": "npm:~1.9.1"
     "@swc/core": "npm:~1.5.7"
     "@swc/helpers": "npm:~0.5.11"

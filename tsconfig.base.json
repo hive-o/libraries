@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@hive-o/nest-probot": ["libs/nest-probot/src/index.ts"]
+      "@hive-o/nest-probot": ["packages/nest-probot/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
