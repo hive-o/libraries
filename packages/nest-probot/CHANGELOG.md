@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/hive-o/toolkit/compare/nest-probot-v1.2.2...nest-probot-v1.2.3) (2024-07-28)
+
+
+### Bug Fixes
+
+* **nest-probot:** add missing deps ([5b0efcc](https://github.com/hive-o/toolkit/commit/5b0efccd712168fa7e31e0bf493f9d3b7546a668))
+
 ## [1.2.2](https://github.com/hive-o/toolkit/compare/nest-probot-v1.2.1...nest-probot-v1.2.2) (2024-07-28)
 
 
