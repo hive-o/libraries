@@ -109,13 +109,13 @@ import { Module } from '@nestjs/common';
     ProbotModule.forRootAsync({
       isGlobal: true, // (optional), defaults to true
       useFactory: (envConfig: ConfigService) => ({
-        appId: envConfig.GH_APP_ID,
-        clientId: envConfig.GH_CLIENT_ID,
-        clientSecret: envConfig.GH_CLIENT_SECRET,
-        privateKey: envConfig.GH_PRIVATE_KEY, // base64 converted value of your github private key
-        webhookSecret: envConfig.GH_WEBHOOK_SECRET, // optional
-        webhookProxy: envConfig.GH_WEBHOOK_PROXY, // optional
-        webhookPath: envConfig.GH_WEBHOOK_PATH, // optional
+        appId: envConfig.get('GH_APP_ID'),
+        clientId: envConfig.get('GH_CLIENT_ID'),
+        clientSecret: envConfig.get('GH_CLIENT_SECRET'),
+        privateKey: envConfig.get('GH_PRIVATE_KEY'), // base64 converted value of your github private key
+        webhookSecret: envConfig.get('GH_WEBHOOK_SECRET'), // optional
+        webhookProxy: envConfig.get('GH_WEBHOOK_PROXY'), // optional
+        webhookPath: envConfig.get('GH_WEBHOOK_PATH'), // optional
       }),
       inject: [ConfigService],
     })
