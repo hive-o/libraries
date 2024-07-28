@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/hive-o/packages/compare/nest-probot-v1.2.0...nest-probot-v1.2.1) (2024-07-28)
+
+
+### Bug Fixes
+
+* **nest-probot:** update documentation, remove path from options ([616270d](https://github.com/hive-o/packages/commit/616270d62c129678755685568142352ebe1a6a3e))
+
 # [1.2.0](https://github.com/hive-o/packages/compare/nest-probot-v1.1.1...nest-probot-v1.2.0) (2024-07-27)
 
 
