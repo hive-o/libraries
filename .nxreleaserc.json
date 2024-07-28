@@ -2,7 +2,7 @@
   "changelog": true,
   "npm": true,
   "github": true,
-  "repositoryUrl": "git@github.com:hive-o/packages.git",
+  "repositoryUrl": "git@github.com:hive-o/toolkit.git",
   "branches": [
     "main"
   ]
