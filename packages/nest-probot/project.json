@@ -24,6 +24,16 @@
         "assets": ["packages/nest-probot/*.md"]
       }
     },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/nest-probot/**/*.{ts,tsx,js,jsx}",
+          "packages/nest-probot/package.json"
+        ]
+      }
+    },
     "nx-release-publish": {
       "options": {
         "packageRoot": "dist/{projectRoot}"
