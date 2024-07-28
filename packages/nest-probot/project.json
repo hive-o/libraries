@@ -1,7 +1,7 @@
 {
   "name": "nest-probot",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/nest-probot/src",
+  "sourceRoot": "packages/nest-probot/src",
   "projectType": "library",
   "release": {
     "version": {
@@ -17,11 +17,11 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/libs/nest-probot",
-        "tsConfig": "libs/nest-probot/tsconfig.lib.json",
-        "packageJson": "libs/nest-probot/package.json",
-        "main": "libs/nest-probot/src/index.ts",
-        "assets": ["libs/nest-probot/*.md"]
+        "outputPath": "dist/packages/nest-probot",
+        "tsConfig": "packages/nest-probot/tsconfig.lib.json",
+        "packageJson": "packages/nest-probot/package.json",
+        "main": "packages/nest-probot/src/index.ts",
+        "assets": ["packages/nest-probot/*.md"]
       }
     },
     "nx-release-publish": {
@@ -33,7 +33,7 @@
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
       "options": {
         "buildTarget": "nest-probot:build",
-        "outputPath": "${WORKSPACE_DIR}/dist/libs/nest-probot"
+        "outputPath": "${WORKSPACE_DIR}/dist/packages/nest-probot"
       }
     }
   }
