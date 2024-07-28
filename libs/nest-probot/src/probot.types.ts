@@ -23,7 +23,6 @@ export interface OctokitConfig {
 export interface ProbotModuleOptions {
   config: ProbotConfig;
   isGlobal?: boolean;
-  path: string;
 }
 
 export interface ProbotModuleAsyncOptions
@@ -31,7 +30,6 @@ export interface ProbotModuleAsyncOptions
   useFactory: (...args: any[]) => Promise<ProbotConfig> | ProbotConfig;
   isGlobal?: boolean;
   inject?: any[];
-  path: string;
 }
 
 export enum ProbotMetadata {

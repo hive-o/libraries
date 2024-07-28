@@ -1933,9 +1933,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hive-o/packages@workspace:.":
+"@hive-o/toolkit@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@hive-o/packages@workspace:."
+  resolution: "@hive-o/toolkit@workspace:."
   dependencies:
     "@commitlint/cli": "npm:^17.0.0"
     "@commitlint/config-conventional": "npm:^17.0.0"
