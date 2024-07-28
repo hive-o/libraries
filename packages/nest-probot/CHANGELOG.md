@@ -1,3 +1,10 @@
+## [1.2.4](https://github.com/hive-o/toolkit/compare/nest-probot-v1.2.3...nest-probot-v1.2.4) (2024-07-28)
+
+
+### Bug Fixes
+
+* **nest-probot:** update folder reference ([68d913d](https://github.com/hive-o/toolkit/commit/68d913d43d3fd209a6cc68315e97de76067a6116))
+
 ## [1.2.3](https://github.com/hive-o/toolkit/compare/nest-probot-v1.2.2...nest-probot-v1.2.3) (2024-07-28)
 
 
