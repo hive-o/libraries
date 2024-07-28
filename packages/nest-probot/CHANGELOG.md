@@ -1,3 +1,10 @@
+## [1.2.5](https://github.com/hive-o/toolkit/compare/nest-probot-v1.2.4...nest-probot-v1.2.5) (2024-07-28)
+
+
+### Bug Fixes
+
+* **nest-probot:** update package.json with deps ([96b0fc0](https://github.com/hive-o/toolkit/commit/96b0fc0ab470ebfd21cafc0a8149b6a3c33fc85a))
+
 ## [1.2.4](https://github.com/hive-o/toolkit/compare/nest-probot-v1.2.3...nest-probot-v1.2.4) (2024-07-28)
 
 
