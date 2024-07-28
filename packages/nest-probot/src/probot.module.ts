@@ -27,7 +27,7 @@ export class ProbotModule {
         ProbotHelpers,
       ],
       global: options.isGlobal || true,
-      exports: [ProbotHelpers],
+      exports: [ProbotHelpers, ProbotService],
       module: ProbotModule,
     };
   }
@@ -44,7 +44,7 @@ export class ProbotModule {
         ProbotHelpers,
       ],
       global: options.isGlobal || true,
-      exports: [ProbotHelpers],
+      exports: [ProbotHelpers, ProbotService],
       module: ProbotModule,
     };
   }
