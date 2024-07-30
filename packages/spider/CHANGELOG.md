@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/hive-o/libraries/compare/spider-v1.0.0...spider-v1.1.0) (2024-07-30)
+
+
+### Features
+
+* **spider:** update doc ([685968e](https://github.com/hive-o/libraries/commit/685968eb99f4ffda9314d0b1e2bd9b005edb1f38))
+
 # 1.0.0 (2024-07-30)
 
 
