@@ -1,5 +1,5 @@
 {
-  "name": "@hive-o/toolkit",
+  "name": "@hive-o/libraries",
   "version": "0.0.0",
   "license": "MIT",
   "private": true,
@@ -21,6 +21,8 @@
     "next": "14.2.3",
     "octokit": "^3.2.1",
     "probot": "^13.3.6",
+    "puppeteer": "^22.12.1",
+    "puppeteer-core": "^22.12.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "reflect-metadata": "^0.1.13",

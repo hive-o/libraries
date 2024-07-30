@@ -1,4 +1,4 @@
-name: default
+name: semantic release
 
 on:
   push:
@@ -18,7 +18,7 @@ jobs:
 
       - run: yarn install
 
-      - run: npx nx run nest-probot:semantic-release
+      - run: npx nx run-many semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

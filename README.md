@@ -1,7 +1,7 @@
-# Hive Zero Toolkit
+# Hive Zero Libraries
 ---
 
-The Hive Zero ToolKit provides a set of packages to make working with NestJS & Next.js framework easier.
+The Hive Zero Libraries provides a set of packages to make working with NestJS & Next.js framework easier.
 
 ## Packages
 ---
