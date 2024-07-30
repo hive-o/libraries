@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/hive-o/libraries/compare/nest-probot-v1.2.6...nest-probot-v1.3.0) (2024-07-30)
+
+
+### Features
+
+* **spider:** add basic implementation ([711e511](https://github.com/hive-o/libraries/commit/711e511cfc22d9c9b1cdb51b05d3a86a2ab3fcd1))
+
 ## [1.2.6](https://github.com/hive-o/libraries/compare/nest-probot-v1.2.5...nest-probot-v1.2.6) (2024-07-28)
 
 
