@@ -6,6 +6,7 @@ import console from 'node:console';
 export * from './browser';
 export * from './navigation';
 
+// Main Class
 export class Spider {
   public readonly browser: Browser;
   public readonly navigation: Navigation;

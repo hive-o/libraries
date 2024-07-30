@@ -18,7 +18,7 @@ jobs:
 
       - run: yarn install
 
-      - run: npx nx run-many -t semantic-release
+      - run: npx nx run-many -t semantic-release --parallel=false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
