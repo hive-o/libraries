@@ -27,11 +27,11 @@ yarn add @hive-o/spider
 * **Customizable**: Easily extend and adapt the crawler's behavior to your specific needs.
 
 ```typescript
-import { BrowserManager, Crawler, Navigation } from 'spider-puppeteer';
+import { Spider, Navigation } from '@hive-o/spider';
 
 async function main() {
-  const crawler = new Crawler();
-  await crawler.start(['https://www.example.com', 'https://www.othersite.com']);
+  const spider = new Spider();
+  await spider.start(['https://www.example.com', 'https://www.othersite.com']);
 
   const navigation = Navigation.instance();
   navigation.forEach((domainEntry) => {
@@ -41,8 +41,7 @@ async function main() {
       console.log(`  Query Params: ${routeEntry.query_params.toString()}`);
     });
   });
-
-  await BrowserManager.getInstance().closeBrowser(); // Close browser after crawling
+  
 }
 
 main();
