@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@hive-o/nest-probot": ["packages/nest-probot/src/index.ts"],
-      "@hive-o/spider": ["packages/nest-probot/src/index.ts"]
+      "@hive-o/spider": ["security/spider/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -1,0 +1,17 @@
+{
+  "name": "@hive-o/security-xss",
+  "version": "0.0.0",
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "puppeteer": "^22.12.1",
+    "async": "^3.2.5"
+  },
+  "repository": "https://github.com/hive-o/libraries",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "LGPL-3.0-only",
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts"
+}

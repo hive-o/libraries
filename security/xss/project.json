@@ -1,0 +1,50 @@
+{
+  "name": "security-xss",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "security/xss/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/security/xss",
+        "tsConfig": "security/xss/tsconfig.lib.json",
+        "packageJson": "security/xss/package.json",
+        "main": "security/xss/src/index.ts",
+        "assets": ["security/xss/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "security/xss/**/*.{ts,tsx,js,jsx}",
+          "security/xss/package.json"
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "options": {
+        "buildTarget": "security-xss:build",
+        "outputPath": "${WORKSPACE_DIR}/dist/security/xss"
+      }
+    }
+  }
+}

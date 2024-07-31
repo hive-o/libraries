@@ -6,52 +6,20 @@ on:
       - 'main'
 
 jobs:
-  release-nest-probot:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: check if files package has changes
-        id: files-changed
-        uses: tj-actions/changed-files@v44
-        with:
-          files: packages/nest-probot/**
-
       - name: configure git
-        if: steps.files-changed.outputs.any_changed == 'true'
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
 
-      - if: steps.files-changed.outputs.any_changed == 'true'
+      - name: release
         run: |
           yarn install
-          npx nx run nest-probot:semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  release-spider:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: check if files package has changes
-        id: files-changed
-        uses: tj-actions/changed-files@v44
-        with:
-          files: packages/spider/**
-
-      - name: configure git
-        if: steps.files-changed.outputs.any_changed == 'true'
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-
-      - if: steps.files-changed.outputs.any_changed == 'true'
-        run: |
-          yarn install
-          npx nx run spider:semantic-release
+          npx nx run-many -t semantic-release --parallel=false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
