@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/hive-o/libraries/compare/nest-probot-v1.3.0...nest-probot-v1.4.0) (2024-07-31)
+
+
+### Bug Fixes
+
+* update readme example ([52a1f17](https://github.com/hive-o/libraries/commit/52a1f178f4f75f63434fbedf0e4728629a59a81a))
+
+
+### Features
+
+* **security-xss:** add base code ([72731b8](https://github.com/hive-o/libraries/commit/72731b83db9b3d72732633160253dc647e154e0b))
+
 # [1.3.0](https://github.com/hive-o/libraries/compare/nest-probot-v1.2.6...nest-probot-v1.3.0) (2024-07-30)
 
 
