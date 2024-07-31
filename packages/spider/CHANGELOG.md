@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/hive-o/libraries/compare/spider-v1.1.0...spider-v1.1.1) (2024-07-31)
+
+
+### Bug Fixes
+
+* update readme example ([52a1f17](https://github.com/hive-o/libraries/commit/52a1f178f4f75f63434fbedf0e4728629a59a81a))
+
 # [1.1.0](https://github.com/hive-o/libraries/compare/spider-v1.0.0...spider-v1.1.0) (2024-07-30)
 
 
