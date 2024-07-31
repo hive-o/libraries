@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/hive-o/libraries/compare/spider-v1.1.1...spider-v1.2.0) (2024-07-31)
+
+
+### Features
+
+* **security-xss:** add base code ([72731b8](https://github.com/hive-o/libraries/commit/72731b83db9b3d72732633160253dc647e154e0b))
+
 ## [1.1.1](https://github.com/hive-o/libraries/compare/spider-v1.1.0...spider-v1.1.1) (2024-07-31)
 
 
