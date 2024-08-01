@@ -1,5 +1,5 @@
 {
-  "name": "@hive-o/security-xss",
+  "name": "@hive-o/xss",
   "version": "1.0.0",
   "dependencies": {
     "tslib": "^2.3.0",
