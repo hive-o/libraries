@@ -1,4 +1,4 @@
-import { BrowserContext, Browser as PuppeteerBrowser, launch } from 'puppeteer';
+import { BrowserContext, launch, Browser as PuppeteerBrowser } from 'puppeteer';
 
 export class Browser {
   private _context?: BrowserContext; // Singleton instance
@@ -18,11 +18,6 @@ export class Browser {
     return Browser._instance;
   }
 
-  public get context(): BrowserContext {
-    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-    return this._context!;
-  }
-
   public async close(): Promise<void> {
     if (this.browser) {
       await this.browser.close();
@@ -38,5 +33,10 @@ export class Browser {
     }
 
     return this.browser;
+  }
+
+  public get context(): BrowserContext {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    return this._context!;
   }
 }

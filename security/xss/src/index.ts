@@ -1,17 +1,19 @@
+import { Browser } from '@hive-o/web-driver';
 import * as async from 'async';
-import { launch } from 'puppeteer';
 
 export interface Navigation {
-  url: URL;
   query_params: URLSearchParams;
+  url: URL;
 }
 
 export class Xss {
   async scan(urls: Navigation[], payloads: string[]) {
     await async.forEachSeries(payloads, async (payload: string) => {
       await async.forEachSeries(urls, async ({ url }) => {
-        const browser = await launch();
-        const context = await browser.createBrowserContext();
+        const browser = Browser.instance();
+        await browser.launch();
+
+        const context = browser.context;
         const page = await context.newPage();
 
         try {

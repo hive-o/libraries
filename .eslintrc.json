@@ -1,7 +1,10 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@nx"],
+  "plugins": ["@nx", "perfectionist"],
+  "extends": [
+    "plugin:perfectionist/recommended-natural-legacy"
+  ],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],

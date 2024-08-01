@@ -1,5 +1,6 @@
-import { EmitterWebhookEventName } from '@octokit/webhooks/dist-types/types';
 import { applyDecorators, SetMetadata } from '@nestjs/common';
+import { EmitterWebhookEventName } from '@octokit/webhooks/dist-types/types';
+
 import { GITHUB_EVENT } from './probot.constant';
 
 /**

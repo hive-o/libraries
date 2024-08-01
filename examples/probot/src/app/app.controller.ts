@@ -1,7 +1,7 @@
+import { ProbotService } from '@hive-o/nest-probot';
 import { Controller, Get, Post, Req } from '@nestjs/common';
 
 import { AppService } from './app.service';
-import { ProbotService } from '@hive-o/nest-probot';
 
 @Controller()
 export class AppController {

@@ -1,6 +1,7 @@
-import { EmitterWebhookEventName } from '@octokit/webhooks/dist-types/types';
 import { Injectable } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
+import { EmitterWebhookEventName } from '@octokit/webhooks/dist-types/types';
+
 import { GITHUB_EVENT } from './probot.constant';
 
 @Injectable()

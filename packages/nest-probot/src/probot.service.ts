@@ -1,28 +1,28 @@
 import {
+  Inject,
+  Injectable,
+  Logger,
   OnApplicationBootstrap,
   OnApplicationShutdown,
   OnModuleInit,
-  Injectable,
-  Inject,
-  Logger,
 } from '@nestjs/common';
-import { InstanceWrapper } from '@nestjs/core/injector/instance-wrapper';
 import { DiscoveryService, MetadataScanner } from '@nestjs/core';
+import { InstanceWrapper } from '@nestjs/core/injector/instance-wrapper';
+import { isEmpty } from 'lodash';
+import { nanoid } from 'nanoid';
 import { Probot } from 'probot';
 
 import { GithubHookMetadataAccessor } from './github-hook-metadata.accessor';
-import { ModuleProviders, ProbotConfig } from './probot.types';
 import { createProbot, createSmee } from './probot.helpers';
-import { isEmpty } from 'lodash';
-import { nanoid } from 'nanoid';
+import { ModuleProviders, ProbotConfig } from './probot.types';
 
 @Injectable()
 export class ProbotService
   implements OnModuleInit, OnApplicationBootstrap, OnApplicationShutdown
 {
-  private readonly logger = new Logger(ProbotService.name);
-
   private readonly hooks: Map<string, any>;
+
+  private readonly logger = new Logger(ProbotService.name);
 
   private readonly probot: Probot;
 
@@ -77,6 +77,12 @@ export class ProbotService
       });
   }
 
+  initContext(fn: (context: any) => any) {
+    return async (context: any) => {
+      await fn(context);
+    };
+  }
+
   lookupHooks(instance: Record<string, () => any>, key: string) {
     const methodRef = instance[key];
     const hookMetadata =
@@ -111,16 +117,6 @@ export class ProbotService
       .catch(this.logger.error);
   }
 
-  receiveHook(request: any) {
-    const id = request.headers['x-github-delivery'] as string;
-    const event = request.headers['x-github-event'];
-    const body = request.body;
-
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
-    return this.probot.receive({ payload: body, name: event, id });
-  }
-
   onApplicationBootstrap(): any {
     if (!isEmpty(this.config.webhookProxy)) {
       this.smee = createSmee(this.config);
@@ -130,12 +126,6 @@ export class ProbotService
     this.mountHooks();
   }
 
-  initContext(fn: (context: any) => any) {
-    return async (context: any) => {
-      await fn(context);
-    };
-  }
-
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   onApplicationShutdown(signal?: string): any {
     // TODO clear probot event handlers on shutdown
@@ -143,5 +133,15 @@ export class ProbotService
 
   public async onModuleInit() {
     this.explore();
+  }
+
+  receiveHook(request: any) {
+    const id = request.headers['x-github-delivery'] as string;
+    const event = request.headers['x-github-event'];
+    const body = request.body;
+
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    return this.probot.receive({ id, name: event, payload: body });
   }
 }

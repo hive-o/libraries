@@ -1,10 +1,5 @@
-import { Browser } from './browser';
-import { Navigation } from './navigation';
+import { Browser, Navigation } from '@hive-o/web-driver';
 import { BrowserContext, Page } from 'puppeteer';
-import console from 'node:console';
-
-export * from './browser';
-export * from './navigation';
 
 export class Spider {
   public readonly browser: Browser;
@@ -13,17 +8,6 @@ export class Spider {
   constructor() {
     this.navigation = Navigation.instance();
     this.browser = Browser.instance();
-  }
-
-  async start(initial_urls: string[]) {
-    await this.browser.launch();
-    const context = this.browser.context;
-
-    for (const address of initial_urls) {
-      await this.crawl(address, context);
-    }
-
-    await this.browser.close();
   }
 
   private async crawl(address: string, context: BrowserContext) {
@@ -69,5 +53,16 @@ export class Spider {
       await this.record_navigations(page);
       await page.goBack();
     }
+  }
+
+  async start(initial_urls: string[]) {
+    await this.browser.launch();
+    const context = this.browser.context;
+
+    for (const address of initial_urls) {
+      await this.crawl(address, context);
+    }
+
+    await this.browser.close();
   }
 }

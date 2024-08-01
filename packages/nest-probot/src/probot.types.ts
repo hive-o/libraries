@@ -1,18 +1,18 @@
 import { ModuleMetadata } from '@nestjs/common';
 
 export interface ProbotConfig {
-  webhookSecret?: string;
-  webhookProxy?: string;
+  appId: string;
+  clientId: string;
 
-  webhookPath?: string;
   clientSecret: string;
+  ghUrl?: string;
 
   privateKey: string;
 
-  clientId: string;
-  ghUrl?: string;
+  webhookPath?: string;
+  webhookProxy?: string;
 
-  appId: string;
+  webhookSecret?: string;
 }
 
 export interface OctokitConfig {
@@ -27,9 +27,9 @@ export interface ProbotModuleOptions {
 
 export interface ProbotModuleAsyncOptions
   extends Pick<ModuleMetadata, 'imports'> {
-  useFactory: (...args: any[]) => Promise<ProbotConfig> | ProbotConfig;
-  isGlobal?: boolean;
   inject?: any[];
+  isGlobal?: boolean;
+  useFactory: (...args: any[]) => ProbotConfig | Promise<ProbotConfig>;
 }
 
 export enum ProbotMetadata {

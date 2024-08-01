@@ -1,0 +1,50 @@
+{
+  "name": "web-driver",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/web-driver/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/web-driver",
+        "tsConfig": "packages/web-driver/tsconfig.lib.json",
+        "packageJson": "packages/web-driver/package.json",
+        "main": "packages/web-driver/src/index.ts",
+        "assets": ["packages/web-driver/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "packages/web-driver/**/*.{ts,tsx,js,jsx}",
+          "packages/web-driver/package.json"
+        ]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    },
+    "semantic-release": {
+      "executor": "@theunderscorer/nx-semantic-release:semantic-release",
+      "options": {
+        "buildTarget": "web-driver:build",
+        "outputPath": "${WORKSPACE_DIR}/dist/packages/web-driver"
+      }
+    }
+  }
+}
