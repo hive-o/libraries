@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/hive-o/libraries/compare/nest-probot-v1.4.0...nest-probot-v1.5.0) (2024-08-01)
+
+
+### Features
+
+* switch to @hive-o/web-driver ([c1206f8](https://github.com/hive-o/libraries/commit/c1206f87add6d70e88ac4a1ca699d009adb488f5))
+
 # [1.4.0](https://github.com/hive-o/libraries/compare/nest-probot-v1.3.0...nest-probot-v1.4.0) (2024-07-31)
 
 
