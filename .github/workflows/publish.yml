@@ -6,7 +6,7 @@ on:
       - 'main'
 
 jobs:
-  release-nest-probot:
+  release:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
@@ -19,69 +19,8 @@ jobs:
       - name: release
         run: |
           yarn install
-          npx nx run nest-probot:lint --fix
-          npx nx run nest-probot:semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  release-web-driver:
-    runs-on: ubuntu-20.04
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: configure git
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-
-      - name: release
-        run: |
-          yarn install
-          npx nx run web-driver:lint --fix
-          npx nx run web-driver:semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  release-spider:
-    runs-on: ubuntu-20.04
-    needs:
-      - release-web-driver
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: configure git
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-
-      - name: release
-        run: |
-          yarn install
-          npx nx run spider:lint --fix
-          npx nx run spider:semantic-release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-  release-xss:
-    runs-on: ubuntu-20.04
-    needs:
-      - release-web-driver
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: configure git
-        run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-
-      - name: release
-        run: |
-          yarn install
-          npx nx run xss:lint --fix
-          npx nx run xss:semantic-release
+          npx nx run-many -t lint --fix
+          npx nx run-many -t semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
