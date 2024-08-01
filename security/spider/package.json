@@ -4,7 +4,7 @@
   "dependencies": {
     "tslib": "^2.3.0",
     "puppeteer": "^22.12.1",
-    "@hive-o/web-driver": "^1.0.0"
+    "@hive-o/web-driver": "0.0.1"
   },
   "repository": "https://github.com/hive-o/libraries",
   "publishConfig": {
