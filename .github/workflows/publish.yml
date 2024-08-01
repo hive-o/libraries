@@ -9,7 +9,9 @@ jobs:
   check-component-changed:
     runs-on: ubuntu-latest
     outputs:
-      files-changed: ${{ steps.files-changed.outputs }}
+      nest-probot-changed: ${{ steps.files-changed.outputs.nest-probot_any_changed }}
+      spider-changed: ${{ steps.files-changed.outputs.spider_any_changed }}
+      xss-changed: ${{ steps.files-changed.outputs.xss_any_changed }}
     steps:
       - uses: actions/checkout@v3
 
@@ -29,7 +31,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - check-component-changed
-    if: needs.check-component-changed.outputs.nest-probot_any_changed == 'true'
+    if: needs.check-component-changed.outputs.nest-probot-changed == 'true'
     steps:
       - uses: actions/checkout@v3
 
@@ -50,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - check-component-changed
-    if: needs.check-component-changed.outputs.spider_any_changed == 'true'
+    if: needs.check-component-changed.outputs.spider-changed == 'true'
     steps:
       - uses: actions/checkout@v3
 
@@ -71,12 +73,11 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - check-component-changed
-    if: needs.check-component-changed.outputs.xss_any_changed == 'true'
+    if: needs.check-component-changed.outputs.xss-changed == 'true'
     steps:
       - uses: actions/checkout@v3
 
       - name: configure git
-        if: steps.files-changed.outputs.any_changed == 'true'
         run: |
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
