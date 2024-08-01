@@ -41,8 +41,6 @@ export class Spider {
     });
 
     await page.goto(address);
-
-    // Start recursive click exploration
     await this.record_navigations(page);
   }
 

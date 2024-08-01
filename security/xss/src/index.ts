@@ -17,22 +17,19 @@ export class Xss {
         try {
           console.log(`scanning ${url} | payload ${payload}`);
 
-          // Improved Error Handling and Event Management
           page.on('dialog', async (dialog) => {
             console.log('Found Vulnerability: ', dialog.message());
             await dialog.dismiss();
           });
 
-          page.on('error', console.error); // Catch potential page errors
-
+          page.on('error', console.error);
           url.searchParams.append('query', payload);
 
           await page.goto(url.toString(), {
             timeout: 20000,
             waitUntil: 'networkidle2',
-          }); // Increased timeout, wait for network idle
+          });
 
-          // Dynamic Wait for Page Content (Optional)
           await page.waitForFunction(() => document.readyState === 'complete', {
             timeout: 20000,
           });
