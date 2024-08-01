@@ -42,7 +42,6 @@
     "semantic-release": {
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
       "options": {
-        "buildTarget": "spider:build",
         "outputPath": "${WORKSPACE_DIR}/dist/security/spider"
       }
     }

@@ -42,7 +42,6 @@
     "semantic-release": {
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
       "options": {
-        "buildTarget": "nest-probot:build",
         "outputPath": "${WORKSPACE_DIR}/dist/packages/nest-probot"
       }
     }
