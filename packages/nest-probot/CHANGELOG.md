@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/hive-o/libraries/compare/nest-probot-v1.5.0...nest-probot-v1.6.0) (2024-08-01)
+
+
+### Features
+
+* fix version setup for web-driver ([782a5a2](https://github.com/hive-o/libraries/commit/782a5a2f308a2797973bfc3548017046129a9328))
+
 # [1.5.0](https://github.com/hive-o/libraries/compare/nest-probot-v1.4.0...nest-probot-v1.5.0) (2024-08-01)
 
 
