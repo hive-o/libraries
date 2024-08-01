@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/hive-o/libraries/compare/spider-v1.2.0...spider-v1.3.0) (2024-08-01)
+
+
+### Features
+
+* refactor code ([54e76c3](https://github.com/hive-o/libraries/commit/54e76c36078ee8911c5d8097633b8d3c5a518696))
+
 # [1.2.0](https://github.com/hive-o/libraries/compare/spider-v1.1.0...spider-v1.2.0) (2024-08-01)
 
 
