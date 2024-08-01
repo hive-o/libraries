@@ -1,3 +1,11 @@
+# [1.1.0](https://github.com/hive-o/libraries/compare/spider-v1.0.0...spider-v1.1.0) (2024-08-01)
+
+
+### Features
+
+* change package name ([b4abefd](https://github.com/hive-o/libraries/commit/b4abefd4a807e2573d83440392f522a83720bcb2))
+* update security projects ([81bab7b](https://github.com/hive-o/libraries/commit/81bab7b6b5729177fe2081fad18c9f370f718148))
+
 # 1.0.0 (2024-08-01)
 
 
