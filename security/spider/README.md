@@ -1,6 +1,6 @@
 # @hive-o/spider 🕷️
 
-A powerful web crawling and navigation library built with Puppeteer, designed to automate interactions with websites, explore links, and gather information.
+A simple, fast web crawling and navigation library built with Puppeteer, designed to automate interactions with websites, explore links, and gather information.
 
 <p align="center">
 <a href="https://www.npmjs.com/package/@hive-o/spider"><img src="https://img.shields.io/npm/v/@hive-o/spider.svg?style=flat" alt="version" /></a>

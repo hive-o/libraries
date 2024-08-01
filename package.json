@@ -4,7 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "quick": "yarn commit && git pull --rebase && git push"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.2",

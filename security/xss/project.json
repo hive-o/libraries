@@ -42,7 +42,7 @@
     "semantic-release": {
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
       "options": {
-        "buildTarget": "security-xss:build",
+        "buildTarget": "xss:build",
         "outputPath": "${WORKSPACE_DIR}/dist/security/xss"
       }
     }
