@@ -1,7 +1,7 @@
 {
   "name": "spider",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/spider/src",
+  "sourceRoot": "security/spider/src",
   "projectType": "library",
   "release": {
     "version": {
@@ -17,11 +17,11 @@
       "executor": "@nx/js:tsc",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/packages/spider",
-        "tsConfig": "packages/spider/tsconfig.lib.json",
-        "packageJson": "packages/spider/package.json",
-        "main": "packages/spider/src/index.ts",
-        "assets": ["packages/spider/*.md"]
+        "outputPath": "dist/security/spider",
+        "tsConfig": "security/spider/tsconfig.lib.json",
+        "packageJson": "security/spider/package.json",
+        "main": "security/spider/src/index.ts",
+        "assets": ["security/spider/*.md"]
       }
     },
     "lint": {
@@ -29,8 +29,8 @@
       "outputs": ["{options.outputFile}"],
       "options": {
         "lintFilePatterns": [
-          "packages/spider/**/*.{ts,tsx,js,jsx}",
-          "packages/spider/package.json"
+          "security/spider/**/*.{ts,tsx,js,jsx}",
+          "security/spider/package.json"
         ]
       }
     },
@@ -43,7 +43,7 @@
       "executor": "@theunderscorer/nx-semantic-release:semantic-release",
       "options": {
         "buildTarget": "spider:build",
-        "outputPath": "${WORKSPACE_DIR}/dist/packages/spider"
+        "outputPath": "${WORKSPACE_DIR}/dist/security/spider"
       }
     }
   }

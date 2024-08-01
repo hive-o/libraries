@@ -1,5 +1,5 @@
 {
-  "name": "security-xss",
+  "name": "xss",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "security/xss/src",
   "projectType": "library",

@@ -1,5 +1,5 @@
 {
-  "name": "@hive-o/spider",
+  "name": "@hive-o/security-spider",
   "version": "1.2.0",
   "dependencies": {
     "tslib": "^2.3.0",
